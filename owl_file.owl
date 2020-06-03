@@ -1,0 +1,256 @@
+@prefix : <http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy> .
+
+<http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#hasCatagory
+:hasCatagory rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Electronics ;
+             rdfs:range :HeadSets ,
+                        :MobilePhones .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#isTypeOf
+:isTypeOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :Clothing ,
+                      :Electronics ;
+          rdfs:range :Retail .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#is_a_brand
+:is_a_brand rdf:type owl:ObjectProperty ;
+            rdfs:domain :Apple ,
+                        :Beats ,
+                        :Boat ,
+                        :Bose ,
+                        :JBL ,
+                        :Motorola ,
+                        :Nokia ,
+                        :Redimi ,
+                        :Samsung ,
+                        :SkullCandy ;
+            rdfs:range :Brands .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Apple
+:Apple rdf:type owl:Class ;
+       rdfs:subClassOf :Brands .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Apple_Iphone_6s
+:Apple_Iphone_6s rdf:type owl:Class ;
+                 rdfs:subClassOf :Apple ,
+                                 :MobilePhones .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Apple_Iphone_7
+:Apple_Iphone_7 rdf:type owl:Class ;
+                rdfs:subClassOf :Apple ,
+                                :MobilePhones .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Apple_Iphone_X
+:Apple_Iphone_X rdf:type owl:Class ;
+                rdfs:subClassOf :Apple ,
+                                :MobilePhones .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Beats
+:Beats rdf:type owl:Class ;
+       rdfs:subClassOf :Brands .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Boat
+:Boat rdf:type owl:Class ;
+      rdfs:subClassOf :Brands .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Bose
+:Bose rdf:type owl:Class ;
+      rdfs:subClassOf :Brands .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Brands
+:Brands rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Clothing
+:Clothing rdf:type owl:Class ;
+          rdfs:subClassOf :Retail .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Electronics
+:Electronics rdf:type owl:Class ;
+             rdfs:subClassOf :Retail .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#HeadSets
+:HeadSets rdf:type owl:Class ;
+          rdfs:subClassOf :Electronics ;
+          owl:disjointWith :MobilePhones .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#JBL
+:JBL rdf:type owl:Class ;
+     rdfs:subClassOf :Brands .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#MobilePhones
+:MobilePhones rdf:type owl:Class ;
+              rdfs:subClassOf :Electronics .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Motorola
+:Motorola rdf:type owl:Class ;
+          rdfs:subClassOf :Brands .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Motorola_Moto_G8
+:Motorola_Moto_G8 rdf:type owl:Class ;
+                  rdfs:subClassOf :MobilePhones ,
+                                  :Motorola .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Motorola_One_Vision
+:Motorola_One_Vision rdf:type owl:Class ;
+                     rdfs:subClassOf :MobilePhones ,
+                                     :Motorola .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Nokia
+:Nokia rdf:type owl:Class ;
+       rdfs:subClassOf :Brands .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Nokia_2.3
+:Nokia_2.3 rdf:type owl:Class ;
+           rdfs:subClassOf :MobilePhones ,
+                           :Nokia .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Nokia_7.1
+:Nokia_7.1 rdf:type owl:Class ;
+           rdfs:subClassOf :MobilePhones ,
+                           :Nokia .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Nokia_7.2
+:Nokia_7.2 rdf:type owl:Class ;
+           rdfs:subClassOf :MobilePhones ,
+                           :Nokia .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Redimi
+:Redimi rdf:type owl:Class ;
+        rdfs:subClassOf :Brands .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Redimi_Note_6
+:Redimi_Note_6 rdf:type owl:Class ;
+               rdfs:subClassOf :MobilePhones ,
+                               :Redimi .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Redimi_Note_7
+:Redimi_Note_7 rdf:type owl:Class ;
+               rdfs:subClassOf :MobilePhones ,
+                               :Redimi .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Redimi_Note_7_Pro
+:Redimi_Note_7_Pro rdf:type owl:Class ;
+                   rdfs:subClassOf :MobilePhones ,
+                                   :Redimi .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Retail
+:Retail rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Samsung
+:Samsung rdf:type owl:Class ;
+         rdfs:subClassOf :Brands .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Samsung_Galaxy_BudsBlack
+:Samsung_Galaxy_BudsBlack rdf:type owl:Class ;
+                          rdfs:subClassOf :HeadSets ,
+                                          :Samsung ;
+                          owl:disjointWith :Samsung_Hs1303 .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Samsung_Galaxy_M31
+:Samsung_Galaxy_M31 rdf:type owl:Class ;
+                    rdfs:subClassOf :MobilePhones ,
+                                    :Samsung .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Samsung_Galaxy_Note_7
+:Samsung_Galaxy_Note_7 rdf:type owl:Class ;
+                       rdfs:subClassOf :MobilePhones ,
+                                       :Samsung .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Samsung_Hs1303
+:Samsung_Hs1303 rdf:type owl:Class ;
+                rdfs:subClassOf :HeadSets ,
+                                :Samsung .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#Samsung_galaxy_S20
+:Samsung_galaxy_S20 rdf:type owl:Class ;
+                    rdfs:subClassOf :MobilePhones ,
+                                    :Samsung .
+
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#SkullCandy
+:SkullCandy rdf:type owl:Class ;
+            rdfs:subClassOf :Brands .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#6.2
+<http://www.semanticweb.org/sh953701/ontologies/2020/4/Dummy#6.2> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Apple_Iphone_6s
+                :Apple_Iphone_7
+                :Apple_Iphone_X
+                :Motorola_Moto_G8
+                :Motorola_One_Vision
+                :Nokia_2.3
+                :Nokia_7.1
+                :Nokia_7.2
+                :Redimi_Note_6
+                :Redimi_Note_7
+                :Redimi_Note_7_Pro
+                :Samsung_Galaxy_M31
+                :Samsung_Galaxy_Note_7
+                :Samsung_galaxy_S20
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
